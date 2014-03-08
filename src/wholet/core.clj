@@ -1,7 +1,8 @@
 (ns wholet.core
-  (:require [wholet.woofer :refer [woof new-woofer]]))
+  (:require [wholet.woofer :refer [woof get-woofer]]))
 
 (defn agitate [my-woofer]
   (woof my-woofer))
 
-(agitate (new-woofer))
+(defn -main [& args]
+  (repeatedly 20 #(agitate (get-woofer))))
