@@ -4,5 +4,4 @@
 (defn agitate [my-woofer]
   (woof my-woofer))
 
-(defn -main [& args]
-  (repeatedly 20 #(agitate (get-woofer))))
+(repeatedly 20 #(agitate (get-woofer)))
